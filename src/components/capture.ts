@@ -1,11 +1,12 @@
 import { openModal } from "./modal";
 import analyseImage from "./ai";
 
-let modalCanClose = true;
+let processIsRunning = true;
 
 async function captureFromVideo(video: HTMLVideoElement, modal: HTMLDivElement) {
+  if (!processIsRunning) return;
   openModal(modal);
-  modalCanClose = false;
+  processIsRunning = false;
 
   const canvas = document.createElement("canvas");
   canvas.width = video.videoWidth;
@@ -36,8 +37,8 @@ async function captureFromVideo(video: HTMLVideoElement, modal: HTMLDivElement) 
       data.duration / 1000
     }sec pour analyser ton image!`;
 
-    modalCanClose = true;
+    processIsRunning = true;
   });
 }
 
-export {captureFromVideo, modalCanClose};
+export {captureFromVideo, processIsRunning};
