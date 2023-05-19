@@ -1,4 +1,4 @@
-#logo {
+.logo {
   z-index: 4;
   position: absolute;
   top: 0;
@@ -8,4 +8,10 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
+
+  &.block {
+    position: relative;
+    display: block;
+    max-width: max-content;
+  }
 }

@@ -4,7 +4,16 @@ body {
   font-family: $body-font;
 }
 
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
 @import './style/modal.scss';
 @import './style/camera.scss';
 @import './style/logo.scss';
 @import './style/result.scss';
+@import './style/apropos.scss';
