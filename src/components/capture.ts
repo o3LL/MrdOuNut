@@ -1,8 +1,11 @@
 import { openModal } from "./modal";
 import analyseImage from "./ai";
 
+let modalCanClose = true;
+
 async function captureFromVideo(video: HTMLVideoElement, modal: HTMLDivElement) {
   openModal(modal);
+  modalCanClose = false;
 
   const canvas = document.createElement("canvas");
   canvas.width = video.videoWidth;
@@ -24,7 +27,7 @@ async function captureFromVideo(video: HTMLVideoElement, modal: HTMLDivElement) 
 
   // Perform the fake analysis and display the result
   const resultElement = document.getElementById("result") as HTMLDivElement;
-  resultElement.innerHTML = "Analyse en cours...";
+  resultElement.innerHTML = "Analyse en cours... <span class='spin'>🤔</span>";
 
   photo.addEventListener("load", async function () {
     const data = await analyseImage(photo);
@@ -32,7 +35,9 @@ async function captureFromVideo(video: HTMLVideoElement, modal: HTMLDivElement) 
     resultElement.innerHTML = `Ca ressemble à ${data.result}, ça m'a pris ${
       data.duration / 1000
     }sec pour analyser ton image!`;
+
+    modalCanClose = true;
   });
 }
 
-export default captureFromVideo;
+export {captureFromVideo, modalCanClose};

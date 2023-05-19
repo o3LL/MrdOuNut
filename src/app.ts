@@ -1,4 +1,4 @@
-import captureFromVideo from "./components/capture";
+import { captureFromVideo } from "./components/capture";
 import streamCamera from "./components/video";
 
 document.addEventListener("DOMContentLoaded", () => {

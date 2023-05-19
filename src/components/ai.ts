@@ -6,7 +6,7 @@ async function analyseImage(
 ): Promise<{ result: string; duration: number }> {
   return new Promise((resolve, reject) => {
     // Generate a random number between 2 seconds and 8 seconds in milliseconds
-    const randomTimer = 1 || Math.floor(Math.random() * 6000) + 2000;
+    const randomTimer = Math.floor(Math.random() * 6000) + 2000;
     const dominantColor = colorThief.getColor(image);
     // Check if dominantColor (array of 3 numbers representing RGB) is somehow pink
     const isPink =

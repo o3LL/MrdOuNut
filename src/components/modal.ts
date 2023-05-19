@@ -1,3 +1,5 @@
+import { modalCanClose } from "./capture";
+
 const elementThatWillCloseModal = document.querySelectorAll(
     ".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
   ) || [];
@@ -7,6 +9,7 @@ function openModal(element: HTMLElement) {
 }
 
 function closeModal(element: HTMLElement) {
+  if (!modalCanClose) return
   element.classList.remove("is-active");
   // Prevent multiple images to be displayed
   document.getElementById("currentPhoto")?.remove();
