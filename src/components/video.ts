@@ -11,7 +11,7 @@ function streamCamera(video: HTMLVideoElement) {
       video.play();
     })
     .catch((error) => {
-      alert("Unable to access the camera: " + error);
+      alert("Pour que ça fonctionne faut que tu acceptes la caméra");
     });
 }
 
