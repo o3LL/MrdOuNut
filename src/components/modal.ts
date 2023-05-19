@@ -8,6 +8,8 @@ function openModal(element: HTMLElement) {
 
 function closeModal(element: HTMLElement) {
   element.classList.remove("is-active");
+  // Prevent multiple images to be displayed
+  document.getElementById("currentPhoto")?.remove();
 }
 
 elementThatWillCloseModal.forEach((element) => {

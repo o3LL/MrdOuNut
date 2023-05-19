@@ -1,0 +1,21 @@
+#preview {
+  object-fit: cover;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+#cameraBtn {
+  z-index: 1;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 9999px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}

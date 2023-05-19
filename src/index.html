@@ -10,7 +10,7 @@
   <!-- Generic HTML Head -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script type="module" src="app.ts"></script>
+  <script type="module" src="./app.ts"></script>
   <link rel="stylesheet" href="./index.scss">
 </head>
 
@@ -18,8 +18,18 @@
   <div id="resultModal" class="modal">
     <div class="modal-background"></div>
 
+    <!-- Close button -->
+    <button class="modal-close is-large" aria-label="close">
+      <!-- Close cross svg -->
+      <svg height="24" width="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1" stroke-linecap="round"
+        stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
     <div class="modal-content">
-      <img id="currentPhoto" alt="">
+      <div id="imageContainer"></div>
       <p id="result"></p>
     </div>
   </div>
