@@ -26,7 +26,7 @@ async function analyseImage(
         ? "... heu, bah c'est <strong>Kronomuzik</strong>"
         : randomNumber < 0.5
         ? "de la <strong>Merde</strong> 💩"
-        : "du <strong>Nutella</strong> 🍫";
+        : "du <strong>Nut</strong> 🍫";
       resolve({
         result: analysisResult,
         duration: randomTimer,

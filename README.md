@@ -1,7 +1,7 @@
-# MrdOuNutella
+# MrdOuNut
 
-Bienvue sur le projet MrdOuNutella ! J'ai pas mal utilisé ChatGPT pour générer le contenu de ce projet, voici les prompts que j'ai utilisé :
-> ChatGPT Prompt : Generate a web app that require access to the phone camera, ask to take a photo and then do a fake analysis of this photo and show a result that would be half of the time "merde" and half of the time "nutella"
+Bienvue sur le projet MrdOuNut ! J'ai pas mal utilisé ChatGPT pour générer le contenu de ce projet, voici les prompts que j'ai utilisé :
+> ChatGPT Prompt : Generate a web app that require access to the phone camera, ask to take a photo and then do a fake analysis of this photo and show a result that would be half of the time "merde" and half of the time "nut"
 
 Premier prototype par ChatGPT : 
 ```html
@@ -55,7 +55,7 @@ Premier prototype par ChatGPT :
         setTimeout(function () {
           var randomNumber = Math.random();
           var analysisResult =
-            randomNumber < 0.5 ? "merde" : "nutella";
+            randomNumber < 0.5 ? "merde" : "nut";
           result.innerHTML = "Analysis Result: " + analysisResult;
         }, 2000);
       }
@@ -69,7 +69,7 @@ Le reste je l'ai fait tout seul comme un grand promis les bougs aigris de Twitte
 Sauf le readme, j'avoue j'avais la flemme, j'ai **encore** utilisé ChatGPT pour le faire :
 > ChatGPT Prompt : Fait un readme.md technique pour expliquer comment fonctionne le projet, j'utilise ParcelJS comme bundler
 
-Ce projet est une application web qui utilise la caméra du téléphone pour capturer une photo et affiche un résultat d'analyse factice. Le résultat sera soit "merde" (50% de chance), soit "nutella" (50% de chance).
+Ce projet est une application web qui utilise la caméra du téléphone pour capturer une photo et affiche un résultat d'analyse factice. Le résultat sera soit "merde" (50% de chance), soit "nut" (50% de chance).
 
 ## Fonctionnement
 
@@ -82,7 +82,7 @@ L'application est développée en utilisant les technologies suivantes :
 
 L'application utilise l'API `getUserMedia` pour accéder à la caméra du téléphone et afficher le flux vidéo dans un élément `video` de la page web. Lorsque l'utilisateur clique sur le bouton "Prendre une photo", une capture d'écran est réalisée à partir du flux vidéo et transformée en image.
 
-Ensuite, l'application effectue une analyse factice en utilisant une valeur aléatoire pour déterminer si le résultat sera "merde" ou "nutella". Le résultat de l'analyse est ensuite affiché à l'écran.
+Ensuite, l'application effectue une analyse factice en utilisant une valeur aléatoire pour déterminer si le résultat sera "merde" ou "nut". Le résultat de l'analyse est ensuite affiché à l'écran.
 
 ## Configuration et exécution du projet
 
